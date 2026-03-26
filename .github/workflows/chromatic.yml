@@ -20,6 +20,28 @@ jobs:
     name: Run Chromatic
     runs-on: ubuntu-latest
     steps:
+      - name: Output git info
+        run: |
+          if [ -n "${{ github.event.merge_group }}" ]; then
+            echo "================================================"
+            echo "  MERGE QUEUE - MERGE STRATEGY DETAILS"
+            echo "================================================"
+            echo ""
+            echo "  This branch being merged:"
+            echo "    Branch : ${{ github.event.merge_group.head_ref }}"
+            echo "    Commit : ${{ github.event.merge_group.head_sha }}"
+            echo ""
+            echo "  Merging into:"
+            echo "    Branch : ${{ github.event.merge_group.base_ref }}"
+            echo "    Commit : ${{ github.event.merge_group.base_sha }}"
+            echo ""
+            echo "  Full commit details:"
+            echo "    Commit ID : ${{ github.event.merge_group.head_commit.id }}"
+            echo "    Tree ID   : ${{ github.event.merge_group.head_commit.tree_id }}"
+            echo "================================================"
+          else
+            echo "  [INFO] Not a merge queue event - git info skipped."
+          fi
       - name: Checkout code
         uses: actions/checkout@v5
         with:
