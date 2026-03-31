@@ -56,5 +56,6 @@ jobs:
         with:
           projectToken: ${{ github.event.inputs.project_token || secrets.CHROMATIC_PROJECT_TOKEN }}
           debug: true
+          exitZeroOnChanges: ${{ github.event_name != 'merge_group' }}
         env:
           CHROMATIC_INDEX_URL: ${{ github.event.inputs.chromatic_index_url || 'https://index.staging-chromatic.com' }}
