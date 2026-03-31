@@ -52,10 +52,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run Chromatic
-        uses: chromaui/action-canary@v16.1.0--canary.1256.23509139867.0
+        uses: chromaui/action-canary@v16.1.0--canary.1256.23818407213.0
         with:
           projectToken: ${{ github.event.inputs.project_token || secrets.CHROMATIC_PROJECT_TOKEN }}
           debug: true
-          exitZeroOnChanges: ${{ github.event_name != 'merge_group' }}
         env:
           CHROMATIC_INDEX_URL: ${{ github.event.inputs.chromatic_index_url || 'https://index.staging-chromatic.com' }}
