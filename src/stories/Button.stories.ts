@@ -53,6 +53,7 @@ export const Small: Story = {
   },
 };
 
+// we need a special story
 export const Special: Story = {
   args: {
     size: 'special',
