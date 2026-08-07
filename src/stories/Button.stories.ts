@@ -46,6 +46,7 @@ export const Large: Story = {
   },
 };
 
+// We need a small story
 export const Small: Story = {
   args: {
     size: 'small',
