@@ -46,6 +46,7 @@ export const Large: Story = {
   },
 };
 
+// We need a small story
 export const Small: Story = {
   args: {
     size: 'small',
@@ -55,7 +56,7 @@ export const Small: Story = {
 
 export const Special: Story = {
   args: {
-    size: 'special',
+    size: 'large',
     label: 'Button',
   },
 };
