@@ -60,3 +60,15 @@ export const Special: Story = {
     label: 'Button text 1',
   },
 };
+
+export const TwoButtons: Story = {
+  args: {
+    label: 'Button',
+  },
+  render: (args) => (
+    <div style={{ display: 'flex', gap: 8 }}>
+      <Button {...args} primary label="Confirm" />
+      <Button {...args} label="Cancel" />
+    </div>
+  ),
+};
