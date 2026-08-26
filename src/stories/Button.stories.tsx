@@ -68,7 +68,7 @@ export const TwoButtons: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: 8 }}>
       <Button {...args} primary label="Confirm" />
-      <Button {...args} label="Cancel" />
+      <Button {...args} label="Cancelllll" />
     </div>
   ),
 };
