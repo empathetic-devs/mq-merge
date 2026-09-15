@@ -54,7 +54,7 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@v18.0.1
         with:
-          projectToken: ${{ github.event.inputs.project_token || secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ github.event.inputs.project_token || 'chpt_279addeeb80a1e6' }}
           debug: true
         env:
-          CHROMATIC_INDEX_URL: ${{ github.event.inputs.chromatic_index_url || 'https://index.staging-chromatic.com' }}
+          CHROMATIC_INDEX_URL: ${{ github.event.inputs.chromatic_index_url || 'https://chromatic-www-pr-12000.herokuapp.com' }}
