@@ -35,7 +35,7 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    label: 'Just Dance!',
+    label: 'Just Dance! yOYO',
   },
 };
 
